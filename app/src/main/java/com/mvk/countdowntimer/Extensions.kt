@@ -4,6 +4,9 @@ import android.graphics.Color
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color as Colors
+import androidx.compose.ui.graphics.SolidColor
 
 fun Window.makeTransparentStatusBar() {
     markAttributes(
@@ -26,3 +29,5 @@ fun Window.makeTransparentStatusBar() {
 fun Window.markAttributes(bits: Int, value: Boolean) {
 
 }
+
+fun Colors.toBrush(): Brush = SolidColor(this)
